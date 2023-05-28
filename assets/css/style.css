@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*skeleton code*/
+
+body {
+    background-color: rgb(204, 202, 202);
+}
+
+/* header section */
+
+header {
+    background-color: rgb(48, 48, 48);
+    color: rgb(204, 202, 202);
+}
