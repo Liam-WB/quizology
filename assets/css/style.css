@@ -59,3 +59,10 @@ header {
 #navigation li:hover {
     background-color: rgb(48, 48, 48);
 }
+
+#game-area {
+    background-color: rgb(231, 230, 230);
+    width: 92%;
+    height: 740px;
+    margin: 4%;
+}
