@@ -24,6 +24,7 @@ header {
     text-decoration: none;
     color: rgb(204, 202, 202);
     font-size: 2.6em;
+    font-family: 'Times New Roman', Times, serif;
 
     float: left;
     width: auto;
@@ -46,6 +47,7 @@ header {
     background-color: rgb(204, 202, 202);
     text-decoration: none;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 
     margin-right: 24px;
     padding: 20px;
@@ -63,6 +65,182 @@ header {
 #game-area {
     background-color: rgb(231, 230, 230);
     width: 92%;
-    height: 740px;
+    height: 730px;
     margin: 4%;
+}
+
+/* Game Area */
+
+/* Category title content */
+
+#category-title {
+    width: 100%;
+    text-align: center;
+
+    font-size: 4em;
+    color: rgb(48, 48, 48);
+    font-family: 'Times New Roman', Times, serif;
+
+    padding: 40px 0;
+}
+
+/* Question content */
+
+#question-area {
+    width: 90%;
+    height: 10em;
+    overflow: hidden;
+
+    background-color: white;
+
+    margin: 30px 5%;
+}
+
+#question-area p {
+    width: 100%;
+
+    color: rgb(48, 48, 48);
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+
+    padding: 6px 10px;
+}
+
+/* Answer content */
+
+#answer-area {
+    width: 90%;
+    height: 5em;
+
+    background-color: green;
+
+    margin: 30px 5%;
+}
+
+#answer-area input {
+    width: 100%;
+    height: 100%;
+
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+
+/* Tally content */
+
+#tally-area {
+    width: 90%;
+    height: 5em;
+
+    margin: 30px 5%;
+}
+
+.score {
+    width: 45%;
+    height: 100%;
+}
+
+#right {
+    background-color: green;
+    float: left;
+}
+
+#wrong {
+    background-color: red;
+    float: right;
+}
+
+#right p,
+#wrong p {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(48, 48, 48);
+    letter-spacing: 2px;
+
+    padding: 18px 0;
+}
+
+/* Submit content */
+
+#submit {
+    color: rgb(231, 230, 230);
+    background-color: rgb(48, 48, 48);
+
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+
+    text-decoration: none;
+    text-align: center;
+
+    width: 14%;
+    height: 3em;
+    margin: 10px 43%;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: rgb(231, 230, 230);
+    color: rgb(48, 48, 48);
+
+    /* Highlight effect */
+
+    animation: fadeoutBg 0.2s;
+    -moz-animation: fadeoutBg 0.2s;
+    -webkit-animation: fadeoutBg 0.2s;
+    -o-animation: fadeoutBg 0.2s;
+}
+
+/* Effect content */
+
+@keyframes fadeoutBg {
+    from {
+        background-color: rgb(48, 48, 48);
+        color: rgb(231, 230, 230);
+    }
+
+    to {
+        background-color: rgb(231, 230, 230);
+        color: rgb(48, 48, 48);
+    }
+
+}
+
+@-moz-keyframes fadeoutBg {
+    from {
+        background-color: rgb(48, 48, 48);
+        color: rgb(231, 230, 230);
+    }
+
+    to {
+        background-color: rgb(231, 230, 230);
+        color: rgb(48, 48, 48);
+    }
+}
+
+@-webkit-keyframes fadeoutBg {
+
+    from {
+        background-color: rgb(48, 48, 48);
+        color: rgb(231, 230, 230);
+    }
+
+    to {
+        background-color: rgb(231, 230, 230);
+        color: rgb(48, 48, 48);
+    }
+}
+
+@-o-keyframes fadeoutBg {
+
+    from {
+        background-color: rgb(48, 48, 48);
+        color: rgb(231, 230, 230);
+    }
+
+    to {
+        background-color: rgb(231, 230, 230);
+        color: rgb(48, 48, 48);
+    }
 }
