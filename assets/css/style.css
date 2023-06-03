@@ -62,16 +62,20 @@ header {
     background-color: rgb(48, 48, 48);
 }
 
+.class:not(:hover) {
+    visibility: hidden;
+}
+
+/* Game Area */
+
+/* Category title content */
+
 #game-area {
     background-color: rgb(231, 230, 230);
     width: 92%;
     height: 730px;
     margin: 4%;
 }
-
-/* Game Area */
-
-/* Category title content */
 
 #category-title {
     width: 100%;
