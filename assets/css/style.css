@@ -35,11 +35,12 @@ header {
 
 #navigation li {
     font-size: 1.6em;
-
     list-style-type: none;
-
     float: right;
+
     margin-top: 46px;
+    margin-right: 24px;
+    width: auto;
 }
 
 #navigation a {
@@ -49,13 +50,21 @@ header {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 
-    margin-right: 24px;
+
     padding: 20px;
 }
 
-#navigation a:hover {
+/* hover/highlight effects */
+
+#navigation a:hover,
+.dropdown:hover,
+#dropdown-button {
     color: rgb(204, 202, 202);
     background-color: rgb(48, 48, 48);
+}
+
+.categories a:hover {
+    background-color: #ddd;
 }
 
 #navigation li:hover {
@@ -64,6 +73,29 @@ header {
 
 .class:not(:hover) {
     visibility: hidden;
+}
+
+/* drop down specific content */
+
+.categories {
+    display: none;
+    position: absolute;
+    right: 15.95%;
+    top: 95px;
+    background-color: #f9f9f9;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 181.5px;
+}
+
+.categories a {
+    float: none;
+    display: block;
+}
+
+.dropdown:hover .categories {
+    display: block;
 }
 
 /* Game Area */
