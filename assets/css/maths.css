@@ -124,12 +124,12 @@ header {
 
 #question-area {
     width: 90%;
-    height: 6em;
+    height: 10em;
     overflow: hidden;
 
-    text-align: center;
+    background-color: white;
 
-    margin: 0 5% 30px 5%;
+    margin: 30px 5%;
 }
 
 #question-area p {
@@ -150,25 +150,13 @@ header {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#answer-area div {
-    float: left;
-    border: 2px solid rgb(48, 48, 48);
-    background-color: white;
-    margin-left: 4%;
-    height: 100%;
-    width: 20%;
-    overflow: hidden;
-}
-
-#answer-area img {
-    height: 100%;
-}
-
 /* Answer content */
 
 #answer-area {
     width: 90%;
-    height: 20em;
+    height: 5em;
+
+    background-color: green;
 
     margin: 30px 5%;
 }

@@ -8,7 +8,7 @@
     <meta name="description" content="Quizology, online studies resource">
     <meta name="keywords" content="Quizology, quiz, test, online">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maths.css">
     <title>Quizology</title>
 
     <!-- Font Awesome Scripts -->
@@ -34,7 +34,7 @@
                         <a id="dropdown-button" href="#">Categories <i class="fa-solid fa-chevron-down"></i></a>
                     </li>
                     <div class="categories">
-                        <a href="maths.html" style="margin:0;">Maths</a>
+                        <a href="#" style="margin:0;">Maths</a>
                         <a href="#" style="margin:0;">History</a>
                         <a href="#" style="margin:0;">Science</a>
                         <a href="#" style="margin:0;">Geography</a>
@@ -50,32 +50,25 @@
 
         <!-- Quiz section content -->
         <section id="game-area">
-            <h1 id="category-title">Welcome!</h1>
+            <h1 id="category-title">Category</h1>
             <div id="question-area">
-                <p>Please select which subject you would like to be quizzed on:</p>
+                <span id="operand1">0</span>
+                <span id="operand1">x</span>
+                <span id="operand1">0</span>
+                <span>=</span>
             </div>
             <div id="answer-area">
-                <div>
-                    <a href="maths.html">
-                        <img src="assets/images/Maths.jfif" alt="Maths">
-                    </a>
-                </div>
-                <div>
-                    <a href="">
-                        <img src=" assets/images/History.png" alt="History">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="assets/images/Science.jfif" alt="Science">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="assets/images/Geography.png" alt="Geography">
-                    </a>
-                </div>
+                <input id="answer-box" type="number" placeholder="Answer here...">
             </div>
+            <div id="tally-area">
+                <span class="score" id="right">
+                    <p>Right: X</p>
+                </span>
+                <span class="score" id="wrong">
+                    <p>Wrong: X</p>
+                </span>
+            </div>
+            <button id="submit">Submit</button>
         </section>
 
         <!-- Leaderboard Section? -->
@@ -84,6 +77,11 @@
     <footer>
 
     </footer>
+
+    <!-- JS Script -->
+
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
