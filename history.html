@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quizology, online studies resource">
+    <meta name="keywords" content="Quizology, quiz, test, online">
+
+    <link rel="stylesheet" href="assets/css/history.css">
+    <title>Quizology - History</title>
+
+    <!-- Font Awesome Scripts -->
+    <script src="https://kit.fontawesome.com/9431bb5fd5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <a id="logo" href="index.html">
+            <h1>Quizology</h1>
+        </a>
+        <nav>
+            <ul id="navigation">
+                <div class="dropdown">
+                    <li>
+                        <a id="dropdown-button" href="#">Categories <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <!-- inline margin style for dropdown anchors to override css styling -->
+                    <div class="categories">
+                        <a href="maths.html" style="margin:0;">Maths</a>
+                        <a href="history.html" style="margin:0;">History</a>
+                        <a href="#" style="margin:0;">Science</a>
+                        <a href="#" style="margin:0;">Geography</a>
+                    </div>
+                </div>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="background">
+
+        <!-- Quiz section content -->
+        <section id="game-area">
+            <h1 id="category-title">Maths</h1>
+            <div id="question-area">
+                <span id="question">question</span>
+            </div>
+            <div id="answer-area">
+                <input id="answer-box" type="text" placeholder="Answer here...">
+            </div>
+            <div id="tally-area">
+                <div class="score" id="right">
+                    <p>Right: <span id="right-score">0</span></p>
+                </div>
+                <div class="score" id="wrong">
+                    <p>Wrong: <span id="wrong-score">0</span></p>
+                </div>
+            </div>
+            <button data-type="submit" id="submit">Submit</button>
+        </section>
+
+        <script src="assets/js/history.js"></script>
+
+</body>
+
+</html>
