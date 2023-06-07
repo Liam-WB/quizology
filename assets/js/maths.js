@@ -1,5 +1,7 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+// Maths category
+// Event listener, waits for DOM content
+
+// mathList variable - for generating random maths question operators (only non-function varible)
 
 let mathList = ["addition", "multiply", "subtract", "division"];
 
@@ -30,9 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function runGame(gameType) {
 
-    // Generate two random numbers between 1 and 25
-    // Math.floor rounds down to the whole number
-    // Math.random generates random numbers
+    // .floor rounds the number, .random generates random number - (between 0 - 25) * 2
+    // Throws error code for unrecognised "gameType"
 
     document.getElementById("answer-box").value = "";
     document.getElementById("answer-box").focus();
@@ -57,8 +58,8 @@ function runGame(gameType) {
 
 function checkAnswer() {
 
-    // Checks the answer against the first element in
-    // the returned calculateCorrectAnswer array
+    // Compare user/s written answer against correct answer
+    // If statement returns result
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
@@ -78,8 +79,8 @@ function checkAnswer() {
 
 function calculateCorrectAnswer() {
 
-    // Gets the operands (the numbers) and the operator (plus, minus etc)
-    // directly from the DOM
+    // Attains integer 1 and 2 and mathematical operator from DOM
+    // Throws error code for unrecognised "operator"
 
     let operand1 = parseInt(document.getElementById("operand1").textContent);
     let operand2 = parseInt(document.getElementById("operand2").textContent);
@@ -101,7 +102,7 @@ function calculateCorrectAnswer() {
 
 function incrementScore() {
 
-    // Gets the current score from the DOM and increments it
+    // Attains "right" score from DOM and adds "oldScore" tally
 
     let oldScore = parseInt(document.getElementById("right-score").innerText);
     document.getElementById("right-score").innerText = ++oldScore;
@@ -110,12 +111,14 @@ function incrementScore() {
 
 function incrementWrongAnswer() {
 
-    // Gets the current tally of incorrect answers from the DOM and increments it
+    // Attains "wrong" score from DOM and adds "oldScore" tally
 
     let oldScore = parseInt(document.getElementById("wrong-score").innerText);
     document.getElementById("wrong-score").innerText = ++oldScore;
 
 }
+
+// 4 "display" functions: Displays the given question type "operator" with integer 1 and 2
 
 function displayAdditionQuestion(operand1, operand2) {
 
