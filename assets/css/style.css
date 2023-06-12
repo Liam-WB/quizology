@@ -162,6 +162,7 @@ header {
 
 #answer-area img {
     height: 100%;
+    width: 100%;
 }
 
 /* Answer content */
@@ -299,4 +300,26 @@ header {
         background-color: rgb(231, 230, 230);
         color: rgb(48, 48, 48);
     }
+}
+
+/* category footer section */
+
+#category-footer {
+    width: 90%;
+    height: 100px;
+    margin: 0 5% 0 5%;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    text-align: center;
+    line-height: 30px;
+
+    color: rgb(48, 48, 48);
+}
+
+#category-footer div {
+    width: 20%;
+    margin-left: 4%;
+
+    float: left;
 }
