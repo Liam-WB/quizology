@@ -1,28 +1,115 @@
-// History category
-// Event listener, waits for DOM content
-// QList - compiles all question functions
+let questionList = ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10"];
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-    let QList = [Q1(), Q2(), Q3(), Q4(), Q5(), Q6(), Q7(), Q8()];
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            checkAnswer();
-            QList[Math.floor(Math.random() * QList.length)];
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+                runGame(questionList[Math.floor(Math.random() * questionList.length)]);
+            } else {
+                let gameType = this.getAttribute("data-type");
+                runGame(gameType);
+            }
         });
     }
 
     document.getElementById("answer-box").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             checkAnswer();
-            QList[Math.floor(Math.random() * QList.length)];
+            runGame(questionList[Math.floor(Math.random() * questionList.length)]);
         }
     });
 
-    Q3();
-
+    runGame(questionList[Math.floor(Math.random() * questionList.length)]);
 });
+
+function runGame(gameType) {
+
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
+
+    if (gameType === "Q1") {
+        Q1();
+    } else if (gameType === "Q2") {
+        Q2();
+    } else if (gameType === "Q3") {
+        Q3();
+    } else if (gameType === "Q4") {
+        Q4();
+    } else if (gameType === "Q5") {
+        Q5();
+    } else if (gameType === "Q6") {
+        Q6();
+    } else if (gameType === "Q7") {
+        Q7();
+    } else if (gameType === "Q8") {
+        Q8();
+    } else if (gameType === "Q9") {
+        Q8();
+    } else if (gameType === "Q10") {
+        Q8();
+    }else {
+        alert(`Error: Unknown ${gameType}`);
+        throw `Error: Unknown ${gameType}, aborting`;
+    }
+
+}
+
+function checkAnswer() {
+
+    // Compare user/s written answer against correct answer
+    // If statement returns result
+
+    let userAnswer = document.getElementById("answer-box").value;
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer == calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Correct!");
+        incrementScore();
+    } else {
+        alert(`${userAnswer} is incorrect! The answer is ${calculatedAnswer[0]}.`);
+        incrementWrongAnswer();
+    }
+
+    runGame(questionList[Math.floor(Math.random() * questionList.length)]);
+
+}
+
+function calculateCorrectAnswer() {
+
+    // Attains integer 1 and 2 and mathematical operator from DOM
+    // Throws error code for unrecognised "operator"
+
+    let questionContent = document.getElementById("question").textContent;
+
+    if (questionContent === "Which war was also known as the Great War?") {
+        return ["World War 1", "Q1"];
+    } else if (questionContent === "Who discovered the Americas in 1492?") {
+        return ["Christopher Columbus", "Q2"];
+    } else if (questionContent === "What year was the great fire of London?") {
+        return ["1666", "Q3"];
+    } else if (questionContent === "Who was the leader of Soviet Russia during WWII?") {
+        return ["Joseph Stalin", "Q4"];
+    } else if (questionContent === "True or False: Pompeii was destroyed by an eruption of Mount Etna?") {
+        return ["False", "Q5"];
+    } else if (questionContent === "Apollo, Athena and Poseidon are part of which ancient mythology?") {
+        return ["Greek Mythology", "Q6"];
+    } else if (questionContent === "Who was President when the 9/11 attacks took place?") {
+        return ["George Bush", "Q7"];
+    } else if (questionContent === "Who was the first president of the USA?") {
+        return ["George Washington", "Q8"];
+    } else if (questionContent === "Alfred the Great was the ruler of which Anglo Saxon kingdom?") {
+        return ["Wessex", "Q9"];
+    } else if (questionContent === "Which nurse became famous for their work during the conflict of the Crimean war?") {
+        return ["Florence Nightingale", "Q10"];
+    } else {
+        alert(`Error: Unknown questionType ${questionContent}`);
+        throw `Error: Unknown questionType ${questionContent}, aborting!`;
+    }
+}
 
 function incrementScore() {
 
@@ -70,13 +157,13 @@ function Q4() {
 
 function Q5() {
 
-    document.getElementById("question").innerHTML = "Was Pompeii was destroyed by an eruption of Mount Etna?";
+    document.getElementById("question").innerHTML = "True or False: Pompeii was destroyed by an eruption of Mount Etna?";
 
 }
 
 function Q6() {
 
-    document.getElementById("question").innerHTML = "Apollo, Athena and Poseidon are part of which type of mythology?";
+    document.getElementById("question").innerHTML = "Apollo, Athena and Poseidon are part of which ancient mythology?";
 
 }
 
@@ -92,52 +179,14 @@ function Q8() {
 
 }
 
-function calculateCorrectAnswer() {
+function Q9() {
 
-    // Currently only first value is returned
+    document.getElementById("question").innerHTML = "Alfred the Great was the ruler of which Anglo Saxon kingdom?";
 
-    let questionContent = document.getElementById("question").innerHTML;
-
-    if (questionContent = "Which war was also known as the Great War ?") {
-        return "World War 1";
-    } else if (questionContent = "Who discovered the Americas in 1492?") {
-        return "Christopher Columbus";
-    } else if (questionContent = "What year was the great fire of London?") {
-        return "1666";
-    } else if (questionContent = "Who was the leader of Soviet Russia during WWII?") {
-        return "Joseph Stalin";
-    } else if (questionContent = "True Or False: Pompeii was destroyed by an eruption of Mount Etna") {
-        return "False";
-    } else if (questionContent = "Who was the first man on the moon?") {
-        return "Neil Armstrong";
-    } else if (questionContent = "Who was President when the 9/11 attacks took place?") {
-        return "George Bush";
-    } else if (questionContent = "Who was the first president of the USA?") {
-        return "George Washington";
-    } else {
-        alert(`Unimplemented operator ${questionContent}`);
-        throw `Unimplemented operator ${questionContent}, aborting!`;
-    }
 }
 
-// Compare answers
+function Q10() {
 
-function checkAnswer() {
-
-    // Compare user/s written answer against correct answer
-    // If statement returns result
-
-    let userAnswer = document.getElementById("answer-box").value;
-    let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer == calculatedAnswer;
-
-    if (isCorrect) {
-        alert("Correct!");
-        incrementScore();
-    } else {
-        alert(`${userAnswer} is incorrect! The answer is ${calculatedAnswer}.`);
-        incrementWrongAnswer();
-        console.log(calculatedAnswer);
-    }
+    document.getElementById("question").innerHTML = "Which nurse became famous for their work during the conflict of the Crimean war?";
 
 }
