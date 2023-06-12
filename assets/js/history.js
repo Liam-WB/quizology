@@ -94,8 +94,7 @@ function Q8() {
 
 function calculateCorrectAnswer() {
 
-    // Attains integer 1 and 2 and mathematical operator from DOM
-    // Throws error code for unrecognised "operator"
+    // Currently only first value is returned
 
     let questionContent = document.getElementById("question").innerHTML;
 
