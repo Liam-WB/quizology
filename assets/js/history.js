@@ -64,7 +64,7 @@ function checkAnswer() {
 
     let userAnswer = document.getElementById("answer-box").value;
     let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer == calculatedAnswer[0];
+    let isCorrect = calculatedAnswer.includes(userAnswer);
 
     if (isCorrect) {
         alert("Correct!");
@@ -86,25 +86,25 @@ function calculateCorrectAnswer() {
     let questionContent = document.getElementById("question").textContent;
 
     if (questionContent === "Which war was also known as the Great War?") {
-        return ["World War 1", "Q1"];
+        return ["World War 1", "World war 1", "world war 1", "WW1","Ww1", "ww1"];
     } else if (questionContent === "Who discovered the Americas in 1492?") {
-        return ["Christopher Columbus", "Q2"];
+        return ["Christopher Columbus", "Christopher columbus", "christopher columbus", "Columbus", "columbus"];
     } else if (questionContent === "What year was the great fire of London?") {
-        return ["1666", "Q3"];
+        return ["1666"];
     } else if (questionContent === "Who was the leader of Soviet Russia during WWII?") {
-        return ["Joseph Stalin", "Q4"];
+        return ["Joseph Stalin", "Joseph stalin", "joseph stalin", "Stalin", "stalin"];
     } else if (questionContent === "True or False: Pompeii was destroyed by an eruption of Mount Etna?") {
-        return ["False", "Q5"];
+        return ["False", "false"];
     } else if (questionContent === "Apollo, Athena and Poseidon are part of which ancient mythology?") {
-        return ["Greek Mythology", "Q6"];
+        return ["Greek Mythology", "Greek mythology", "greek mythology", "Greek", "greek"];
     } else if (questionContent === "Who was President when the 9/11 attacks took place?") {
-        return ["George Bush", "Q7"];
+        return ["George Bush", "George W. Bush", "George bush", "george bush", "Bush", "bush"];
     } else if (questionContent === "Who was the first president of the USA?") {
-        return ["George Washington", "Q8"];
+        return ["George Washington", "George washington", "george washington", "Washington", "washington"];
     } else if (questionContent === "Alfred the Great was the ruler of which Anglo Saxon kingdom?") {
-        return ["Wessex", "Q9"];
+        return ["Wessex", "wessex"];
     } else if (questionContent === "Which nurse became famous for their work during the conflict of the Crimean war?") {
-        return ["Florence Nightingale", "Q10"];
+        return ["Florence Nightingale", "Florence nightingale", "florence nightingale"];
     } else {
         alert(`Error: Unknown questionType ${questionContent}`);
         throw `Error: Unknown questionType ${questionContent}, aborting!`;

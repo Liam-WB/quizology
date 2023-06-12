@@ -129,25 +129,18 @@ header {
 
     background-color: white;
 
+    padding-top: 20px;
     margin: 30px 5%;
-}
-
-#question-area p {
-    width: 100%;
-
-    color: rgb(48, 48, 48);
-    font-size: 2em;
-    font-family: 'Times New Roman', Times, serif;
-
-    padding: 6px 10px;
 }
 
 #question-area span {
     height: 100%;
     width: 100%;
     font-size: 3em;
-    padding-left: 20px;
+    padding-left: 30px;
     font-family: 'Times New Roman', Times, serif;
+
+    overflow: hidden;
 }
 
 /* Answer content */
