@@ -129,17 +129,8 @@ header {
 
     background-color: white;
 
+    padding-top: 20px;
     margin: 30px 5%;
-}
-
-#question-area p {
-    width: 100%;
-
-    color: rgb(48, 48, 48);
-    font-size: 2em;
-    font-family: 'Times New Roman', Times, serif;
-
-    padding: 6px 10px;
 }
 
 #question-area span {
