@@ -50,7 +50,7 @@ function runGame(gameType) {
         Q8();
     } else if (gameType === "Q10") {
         Q8();
-    }else {
+    } else {
         alert(`Error: Unknown ${gameType}`);
         throw `Error: Unknown ${gameType}, aborting`;
     }
@@ -62,7 +62,7 @@ function checkAnswer() {
     // Compare user/s written answer against correct answer
     // If statement returns result
 
-    let userAnswer = document.getElementById("answer-box").value;
+    let userAnswer = document.getElementById("answer-box").value.toLowerCase();
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = calculatedAnswer.includes(userAnswer);
 
@@ -86,25 +86,25 @@ function calculateCorrectAnswer() {
     let questionContent = document.getElementById("question").textContent;
 
     if (questionContent === "Which war was also known as the Great War?") {
-        return ["World War 1", "World war 1", "world war 1", "WW1","Ww1", "ww1"];
+        return ["world war 1", "ww1"];
     } else if (questionContent === "Who discovered the Americas in 1492?") {
-        return ["Christopher Columbus", "Christopher columbus", "christopher columbus", "Columbus", "columbus"];
+        return ["christopher columbus", "columbus"];
     } else if (questionContent === "What year was the great fire of London?") {
         return ["1666"];
     } else if (questionContent === "Who was the leader of Soviet Russia during WWII?") {
-        return ["Joseph Stalin", "Joseph stalin", "joseph stalin", "Stalin", "stalin"];
+        return ["joseph stalin", "stalin"];
     } else if (questionContent === "True or False: Pompeii was destroyed by an eruption of Mount Etna?") {
-        return ["False", "false"];
+        return ["false"];
     } else if (questionContent === "Apollo, Athena and Poseidon are part of which ancient mythology?") {
-        return ["Greek Mythology", "Greek mythology", "greek mythology", "Greek", "greek"];
+        return ["greek mythology", "greek"];
     } else if (questionContent === "Who was President when the 9/11 attacks took place?") {
-        return ["George Bush", "George W. Bush", "George bush", "george bush", "Bush", "bush"];
+        return ["george w. bush", "george bush", "bush"];
     } else if (questionContent === "Who was the first president of the USA?") {
-        return ["George Washington", "George washington", "george washington", "Washington", "washington"];
+        return ["george washington", "washington"];
     } else if (questionContent === "Alfred the Great was the ruler of which Anglo Saxon kingdom?") {
-        return ["Wessex", "wessex"];
+        return ["wessex"];
     } else if (questionContent === "Which nurse became famous for their work during the conflict of the Crimean war?") {
-        return ["Florence Nightingale", "Florence nightingale", "florence nightingale"];
+        return ["florence nightingale", "nightingale"];
     } else {
         alert(`Error: Unknown questionType ${questionContent}`);
         throw `Error: Unknown questionType ${questionContent}, aborting!`;

@@ -50,7 +50,7 @@ function runGame(gameType) {
         Q8();
     } else if (gameType === "Q10") {
         Q8();
-    }else {
+    } else {
         alert(`Error: Unknown ${gameType}`);
         throw `Error: Unknown ${gameType}, aborting`;
     }
@@ -62,7 +62,7 @@ function checkAnswer() {
     // Compare user/s written answer against correct answer
     // If statement returns result
 
-    let userAnswer = document.getElementById("answer-box").value;
+    let userAnswer = document.getElementById("answer-box").value.toLowerCase();
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = calculatedAnswer.includes(userAnswer);
 
@@ -86,25 +86,25 @@ function calculateCorrectAnswer() {
     let questionContent = document.getElementById("question").textContent;
 
     if (questionContent === "Which is the main gas that makes up the Earth's atmosphere?") {
-        return ["Nitrogen", "nitrogen"];
+        return ["nitrogen"];
     } else if (questionContent === "What does DNA stand for?") {
-        return ["Deoxyribonucleic Acid", "Deoxyribonucleic acid", "deoxyribonucleic acid"];
+        return ["deoxyribonucleic acid"];
     } else if (questionContent === "The concept of gravity was discovered by which famous physicist?") {
-        return ["Isaac Newton", "Isaac newton", "isaac newton", "Newton", "newton"];
+        return ["sir isaac newton", "isaac newton", "newton"];
     } else if (questionContent === "How many bones are in the human body?") {
         return ["206"];
     } else if (questionContent === "What is the perimeter of a circle called?") {
-        return ["Circumference", "circumference"];
+        return ["circumference"];
     } else if (questionContent === "Sound travels faster in air than in water: true or false?") {
-        return ["False", "false"];
+        return ["false"];
     } else if (questionContent === "What was the name of the first artificial satellite to enter space?") {
-        return ["Sputnik", "sputnik", "Sputnik.1", "sputnik.1", "Sputnik 1", "sputnik 1", "Sputnik One", "Sputnik one", "sputnik one"];
+        return ["sputnik", "sputnik.1", "sputnik 1", "sputnik one"];
     } else if (questionContent === "What metal is the best conductor of electricity?") {
-        return ["Silver", "silver"];
+        return ["silver"];
     } else if (questionContent === "What does a Geiger Counter measure?") {
-        return ["Radiation", "radiation"];
+        return ["radiation"];
     } else if (questionContent === "How many bones do sharks have?") {
-        return ["Zero", "zero", "0", "None", "none"];
+        return ["zero", "0", "none"];
     } else {
         alert(`Error: Unknown questionType ${questionContent}`);
         throw `Error: Unknown questionType ${questionContent}, aborting!`;

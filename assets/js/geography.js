@@ -50,7 +50,7 @@ function runGame(gameType) {
         Q8();
     } else if (gameType === "Q10") {
         Q8();
-    }else {
+    } else {
         alert(`Error: Unknown ${gameType}`);
         throw `Error: Unknown ${gameType}, aborting`;
     }
@@ -62,7 +62,7 @@ function checkAnswer() {
     // Compare user/s written answer against correct answer
     // If statement returns result
 
-    let userAnswer = document.getElementById("answer-box").value;
+    let userAnswer = document.getElementById("answer-box").value.toLowerCase();
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = calculatedAnswer.includes(userAnswer);
 
@@ -85,26 +85,26 @@ function calculateCorrectAnswer() {
 
     let questionContent = document.getElementById("question").textContent;
 
-    if (questionContent === "The five major oceans are the Pacific, Arctic, Southern, Indian and:?") {
-        return ["Atlantic", "atlantic", "Atlantic Ocean", "Atlantic ocean", "atlantic ocean"];
+    if (questionContent === "The five major oceans are the Pacific, Arctic, Southern, Indian and:") {
+        return ["atlantic", "atlantic ocean"];
     } else if (questionContent === "Which continent is the largest?") {
-        return ["Asia", "asia"];
+        return ["asia"];
     } else if (questionContent === "What do we call the line at 0 degrees latitude that splits the Earth into two halves?") {
-        return ["The Equator", "The equator", "the Equator", "the equator", "Equator", "equator"];
+        return ["the equator", "equator"];
     } else if (questionContent === "True or False: The seismometer is the piece of equipment used to measure earthquakes.") {
-        return ["True", "true"];
+        return ["true"];
     } else if (questionContent === "What is the capital of Poland?") {
-        return ["Warsaw", "warsaw"];
+        return ["warsaw"];
     } else if (questionContent === "What is the capital of Italy?") {
-        return ["Rome", "rome"];
+        return ["rome"];
     } else if (questionContent === "How many states are there in the US?") {
-        return ["50", "Fifty", "fifty"];
+        return ["50", "fifty"];
     } else if (questionContent === "Which is larger, Russia or China?") {
-        return ["Russia", "russia"];
+        return ["russia"];
     } else if (questionContent === "Which cluster of mountains border France and Spain?") {
-        return ["Pyrenees", "pyrenees", "The Pyrenees", "The pyrenees", "the pyrenees", "The Pyrenees Mountains", "Pyrenees Mountains"];
+        return ["pyrenees", "the pyrenees", "the pyrenees mountains", "pyrenees mountains"];
     } else if (questionContent === "What is the official currency of India?") {
-        return ["Rupee", "rupee", "Rupees", "rupees", "Indian Ruppees", "Indian rupees", "The Rupee", "the rupee"];
+        return ["rupee", "rupees", "indian Ruppee", "indian rupees", "the rupee"];
     } else {
         alert(`Error: Unknown questionType ${questionContent}`);
         throw `Error: Unknown questionType ${questionContent}, aborting!`;
