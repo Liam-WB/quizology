@@ -323,3 +323,129 @@ header {
 
     float: left;
 }
+
+/* media queries */
+
+/* large screens (1500px=>) */
+
+@media screen and (max-width: 1500px) {
+
+    #answer-area {
+        height: 280px;
+    }
+
+    #category-footer {
+        font-size: 2.8em;
+    }
+
+}
+
+/* large - medium screens (1300px=>) */
+
+@media screen and (max-width: 1300px) {
+
+    #answer-area {
+        height: 240px;
+    }
+
+    #category-footer {
+        margin-top: 40px;
+        font-size: 2.4em;
+
+        height: 80px;
+    }
+
+    #game-area {
+        height: 580px;
+    }
+
+    #category-title {
+        font-size: 3.8em;
+
+        padding: 30px 0;
+    }
+
+    #question-area {
+        font-size: 0.8em;
+
+        height: 5em;
+    }
+
+}
+
+/* medium screens (1000px=>) */
+
+@media screen and (max-width: 1000px) {
+
+    #answer-area {
+        height: 200px;
+    }
+
+    #category-footer {
+        margin-top: 40px;
+        font-size: 2em;
+
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    #game-area {
+        height: 440px;
+    }
+
+    #logo h1 {
+        font-size: 1.8em;
+    }
+
+    #category-title {
+        font-size: 3em;
+
+        padding: 20px 0;
+    }
+
+    #question-area {
+        font-size: 0.6em;
+
+        height: 3em;
+    }
+
+    #question-area p {
+        height: auto;
+    }
+
+    #question-area {
+        margin-bottom: 0;
+    }
+
+}
+
+/* medium - small screens (900px=>) */
+
+@media screen and (max-width: 900px) {
+
+    #category-footer {
+        font-size: 1.8em;
+    }
+
+    #answer-area {
+        height: 160px;
+    }
+
+    #navigation a {
+        padding: 14px;
+    }
+
+    #navigation li {
+        font-size: 1.4em;
+    }
+
+    .categories {
+        width: 151.8px;
+        top: 85px;
+    }
+
+}
+
+/* small screens (750px=>) */
+
+@media screen and (max-width: 750px) {}
