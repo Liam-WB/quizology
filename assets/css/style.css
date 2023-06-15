@@ -200,12 +200,12 @@ header {
 }
 
 #right {
-    background-color: green;
+    background-color: rgb(0, 128, 0);
     float: left;
 }
 
 #wrong {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     float: right;
 }
 

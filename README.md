@@ -104,27 +104,31 @@ The quizzes provided, allow the user a unique, interactive and entertaining appr
 
 I used website wireframe.cc to create the project wireframes.
 
-![Wireframe1](md_images/wf1)
-![Wireframe2](md_images/wf2)
-![Wireframe3](md_images/wf3)
+![Wireframe1](md_images/wf1.png)
+![Wireframe2](md_images/wf2.png)
+![Wireframe3](md_images/wf3.png)
 
-## Surface
+## Design/Style
 
-### Colors
+### Color Scheme
 
-Main colours used in a project:
-- background color: #ccddff
-- font color: #6217ee
-- link color: #ff6600
-- hoover color: #ff9000
+The project consists of a simple color scheme with contrast and high visibility, allowing for easy navigation through the site.
 
-### Fonts
+Main colours used in the project:
+- background color: #cccaca
+- font color: #303030
+- game area color: #e7e6e6
+- score area colors: #008000, #ff0000
 
-- As a main font I used Almarai, and as a backup font sans-serif
+![ColorPallet](md_images/)
+
+### Typography
+
+- As a main font I used Times New Roman, and as a backup I used Times, serif
 
 ### Images
 
-- I used images from [Unspalsh.com](www.unsplash.com) and there are credited in [credits](#credits) section.
+- All images used can be found in the [Images Folder](assets/images) of the project.
 
 [Back to Table of contents](#table-of-contents)
 ___
