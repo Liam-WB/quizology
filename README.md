@@ -239,3 +239,100 @@ The website contains the features listed below:
 
 [Return to directory](#directory)
 ___
+
+## Accessibility
+
+Accessibility was incorporated throughout the development of the website via:
+
+  - The use of semantic HTML.
+  - The use of simple and UXD structuring with CSS and HTML.
+  - The use of Aria labels for description on the images in the project.
+
+## Technology
+
+HTML, CSS and JS were used for the development of this project.
+
+### HTML5
+
+- Skeleton language
+
+### CSS
+
+- Style language
+
+### JS
+
+- Scripting language
+
+### Favicons
+
+- Icon library
+
+### Google Fonts
+
+- Used for fonts
+
+### Git
+
+- Version-control system
+
+### GitHub
+
+- Software Hosting Platform
+
+### CodeAnywhere
+
+- Development Hosting Platform
+
+### Wireframe.cc
+
+- Wireframe creation tool
+
+### Adobe Photoshop CS6
+
+- Image editting software
+
+[Return to directory](#directory)
+___
+
+# Testing
+
+- I used Chrome developer tools throughout the project to extensively test and debug any structure/style issues, as well as [https://validatejavascript.com/] for the JS validation.
+
+## Compatibility Tests
+
+- This website was rigorously tested on various browswers and devices including google chrome, microsoft edge and safari, all of which were tested on IOS devices (An Iphone and Ipad) and windows devices (ASUS laptop and windows OS desktop PC).
+
+## Screen Size Tests
+
+
+
+## Issues/bugs found during testing/development
+
+- Encountered an issue where certain icons were'nt appearing as intended.
+- This was only on certain icons, where I would recieve error messages such as "ERROR GET favicon " so I kept away from icons that were giving these error messages as I assumed they were not formatted properly.
+
+- Encountered an issue where certain elements were not scaling down properly according to their viewport sizes.
+![Overflow](https://user-images.githubusercontent.com/126467141/235235799-c409c924-15ff-4941-894b-40c792ab4805.png)
+- I fixed this by changing the CSS for a bunch of smaller elements. Some smaller elements such as the "main-text" elements were given fixed sizes and box models as I did not think it would be an issue at the time and had not yet thought about media queries. I then changed these types of elements' sizes to percentages so the content would adapt easier to different viewports.
+
+- Encountered an issue where the form was not redirecting to the success page when it was linked.
+- Initially I had intended to use the Code Institute form dump page, for the message submission confirmation, but decided it did not fit well and was not tailored to my website, so changed it to the success page. In doing so, I tried multiple ways of keeping both the form dump page as the form post location and the success page as the page the user is redirected to. I tried making the textarea an element outside of the form and giving it the "form" attribute as well as changing the submit input into a button with an anchor tag, but in the end the form dump page would always override the other "action" or "href", so for now I have removed the form dump page link and post method.
+
+![formbug](https://user-images.githubusercontent.com/126467141/235239003-9ee1b571-5701-4574-b700-cb0f2a15bd15.png)
+
+Past bugs and changes can be found in the [Commit Page](https://github.com/Liam-WB/hackney-coffee/commit/main).
+
+## Performance Testing
+
+I used the chrome devlopers [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) tool to check the website's performance. Here were the results:
+![performance](https://user-images.githubusercontent.com/126467141/235242519-a1017e75-2522-424e-abd9-b77f95ea2bba.png)
+It was said that the website performs slightly slower than intended due to the various images I used, including the high resolution larger background image so I would assume that my project would load faster with a file that takes up less space. It was said that this performance can change depending on external factors but I will attempt to prevent slower performance times in the future nonetheless.
+
+## Code Validation
+
+- I used [W3C HTML Markup Validator](https://validator.w3.org/) to validate my HTML.
+- I used [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate my CSS.
+
+[Return to Directory](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#directory)
+---
