@@ -16,27 +16,68 @@ The project is built with HTML, CSS and JavaScript to achieve the main goal of m
 
 # Directory
 
-- [UX Design/Devolopment](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#ux-designdevelopment)
-  - [User goals](#user-goals)
-    - [New user goals](#new-user-goals)
-    - [Returning user goals](#returning-user-goals)
-    - [Website owner business goals](#website-owner-business-goals)
+- [Quizology](#quizology)
+  - [Portfolio Project 2 Frontend Development Website](#portfolio-project-2-frontend-development-website)
+  - [Live Website Link (GitHub Pages)](#live-website-link-github-pages)
+- [Directory](#directory)
+- [UX Design/Development](#ux-designdevelopment)
+  - [Key Points](#key-points)
+  - [Target Audience](#target-audience)
+  - [Website Owner Goals](#website-owner-goals)
+  - [User Goals](#user-goals)
+  - [Returning User Goals](#returning-user-goals)
   - [User stories](#user-stories)
+    - [As a business owner](#as-a-business-owner)
+    - [As a new customer](#as-a-new-customer)
+    - [As a returning customer](#as-a-returning-customer)
   - [Structure of the website](#structure-of-the-website)
+  - [Design/Style](#designstyle)
+    - [Color Scheme](#color-scheme)
+    - [Typography](#typography)
+    - [Images](#images)
   - [Wireframes](#wireframes)
-  - [Surface](#surface)
-- [Features](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#features)
-- [Technology](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#technology)
-- [Testing](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#testing)
-  - [Functionality testing](#functionality-testing)
-  - [Compatibility testing](#compatibility-testing)
+- [Features](#features)
+    - [Page structures](#page-structures)
+  - [Navigation bar](#navigation-bar)
+  - [Home](#home)
+  - [Maths, History, Science and Geography Pages](#maths-history-science-and-geography-pages)
+  - [Favicons](#favicons)
+  - [Future implementations](#future-implementations)
+  - [Accessibility](#accessibility)
+  - [Technology](#technology)
+    - [HTML5](#html5)
+    - [CSS](#css)
+    - [JS](#js)
+    - [Favicons](#favicons-1)
+    - [Google Fonts](#google-fonts)
+    - [Git](#git)
+    - [GitHub](#github)
+    - [CodeAnywhere](#codeanywhere)
+    - [Wireframe.cc](#wireframecc)
+    - [Adobe Photoshop CS6](#adobe-photoshop-cs6)
+- [Testing](#testing)
+  - [Compatibility Tests](#compatibility-tests)
+  - [Lighthouse Tests](#lighthouse-tests)
   - [Code Validation](#code-validation)
-  - [User stories testing](#user-stories-testing)
-  - [Issues found during site development](#issues-found-during-site-development)
-  - [Performance testing](#performance-testing)
-- [Deployment](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#deployment)
-- [Referencing/credit](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#referencingcredit)
-- [Project Screenshots](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#project-screenshots)
+  - [Issues/bugs found during testing/development](#issuesbugs-found-during-testingdevelopment)
+  - [User Story Tests](#user-story-tests)
+    - [As a business owner:](#as-a-business-owner-1)
+    - [As a first time user:](#as-a-first-time-user)
+    - [As a client:](#as-a-client)
+    - [As a returning user:](#as-a-returning-user)
+  - [Return to Directory](#return-to-directory)
+- [Deployment](#deployment)
+  - [Return to Directory](#return-to-directory-1)
+- [Referencing/credit](#referencingcredit)
+    - [Code](#code)
+    - [Content](#content)
+    - [Ideas](#ideas)
+  - [Return to Directory](#return-to-directory-2)
+- [Project Screenshots](#project-screenshots)
+  - [In development:](#in-development)
+  - [End result:](#end-result)
+  - [Return to Directory](#return-to-directory-3)
+
 
 # UX Design/Development
 
@@ -303,36 +344,107 @@ ___
 
 - This website was rigorously tested on various browswers and devices including google chrome, microsoft edge and safari, all of which were tested on IOS devices (An Iphone and Ipad) and windows devices (ASUS laptop and windows OS desktop PC).
 
-## Screen Size Tests
+## Lighthouse Tests
 
+- I used chrome dev tools' lighthouse to test the performance, accessibility, best practices and SEO of the website.
 
+index.html
+![Home Lighthouse](md_images/LH-Home.png)
+
+maths.html
+![Home Lighthouse](md_images/LH-Maths.png)
+
+history.html, science.html, geography.html (as the content is similar)
+![Home Lighthouse](md_images/LH-History.png)
+
+## Code Validation
+
+- I used [jshint](https://jshint.com/) to validate my JS.
+- I used [W3C HTML Markup Validator](https://validator.w3.org/) to validate my HTML.
+- I used [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate my CSS.
 
 ## Issues/bugs found during testing/development
+
+The following lists some issues encountered during the development of the website. Some issues were fixed, some would have been fixed with more time/future impelementations.
 
 - Encountered an issue where certain icons were'nt appearing as intended.
 - This was only on certain icons, where I would recieve error messages such as "ERROR GET favicon " so I kept away from icons that were giving these error messages as I assumed they were not formatted properly.
 
-- Encountered an issue where certain elements were not scaling down properly according to their viewport sizes.
-![Overflow](https://user-images.githubusercontent.com/126467141/235235799-c409c924-15ff-4941-894b-40c792ab4805.png)
-- I fixed this by changing the CSS for a bunch of smaller elements. Some smaller elements such as the "main-text" elements were given fixed sizes and box models as I did not think it would be an issue at the time and had not yet thought about media queries. I then changed these types of elements' sizes to percentages so the content would adapt easier to different viewports.
+- Encountered an error when validating HTML with error message "End tag for body seen, but there were unclosed elements.", however the labelled line includes closing tags.
 
-- Encountered an issue where the form was not redirecting to the success page when it was linked.
-- Initially I had intended to use the Code Institute form dump page, for the message submission confirmation, but decided it did not fit well and was not tailored to my website, so changed it to the success page. In doing so, I tried multiple ways of keeping both the form dump page as the form post location and the success page as the page the user is redirected to. I tried making the textarea an element outside of the form and giving it the "form" attribute as well as changing the submit input into a button with an anchor tag, but in the end the form dump page would always override the other "action" or "href", so for now I have removed the form dump page link and post method.
+- Encountered an issue where the final question in the list of available questions for the history, science and geography pages were not displaying.
 
-![formbug](https://user-images.githubusercontent.com/126467141/235239003-9ee1b571-5701-4574-b700-cb0f2a15bd15.png)
+- Encountered an issue where questions would display multiple times in a row.
 
 Past bugs and changes can be found in the [Commit Page](https://github.com/Liam-WB/hackney-coffee/commit/main).
 
-## Performance Testing
+## User Story Tests
 
-I used the chrome devlopers [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) tool to check the website's performance. Here were the results:
-![performance](https://user-images.githubusercontent.com/126467141/235242519-a1017e75-2522-424e-abd9-b77f95ea2bba.png)
-It was said that the website performs slightly slower than intended due to the various images I used, including the high resolution larger background image so I would assume that my project would load faster with a file that takes up less space. It was said that this performance can change depending on external factors but I will attempt to prevent slower performance times in the future nonetheless.
+### As a business owner:
 
-## Code Validation
+- I want to create a positive user experience, fully responsive, interactive and fully functional web application resulting in a beneficial end-result.
 
-- I used [W3C HTML Markup Validator](https://validator.w3.org/) to validate my HTML.
-- I used [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate my CSS.
+### As a first time user:
 
-[Return to Directory](https://github.com/Liam-WB/hackney-coffee/blob/main/README.md#directory)
+- I want an engaging experience that gratifies the main purpose of my visit, in this case being to test my knowledge in the given subject of study and show me what I know and don't know. I also want a simple and positive user experience.
+
+### As a client:
+
+- I want to be able to access this web application flexibly, remotely and from any browser or device.
+
+### As a returning user:
+
+- I want to be able to come back to the website and compare my scores to the last time I visited and try different subject quizzes.
+
+[Return to Directory](#directory)
+---
+
+# Deployment
+
+The project was deployed on GitHub pages. I used CodeAnywhere to commit my changes to git version control and pushed to GitHub. I then deployed my project by going to settings, changing the source to the main branch and saved. This published my site to <https://liam-wb.github.io/quizology/>
+
+This project can also be run locally by extracting the code to a Zip file and running in your own IDE
+
+[Return to Directory](#directory)
+---
+
+# Referencing/credit
+
+- The linked [Student Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used for this project, made and supplied by Code Institute.
+
+### Code
+
+- HTML <https://www.w3schools.com/>
+- CSS <https://css-tricks.com/>
+- Code Snippets <https://www.w3schools.com/howto/default.asp>
+- JS <https://www.w3schools.com/> <https://stackoverflow.com/>
+
+### Content
+
+- Quiz questions <https://www.google.com/>
+- Images <https://images.google.co.uk/>
+
+### Ideas
+
+- <https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md>
+- Various quiz websites e.g. <https://www.bbc.co.uk/bitesize/articles/z4f7kmn>
+- Prevously made website <https://github.com/Liam-WB/hackney-coffee/>
+
+[Return to Directory](#directory)
+---
+
+# Project Screenshots
+
+## In development:
+![quizologyDev1](md_images/Quizology.png)
+![quizologyDev2](md_images/Quizology2.png)
+
+## End result:
+![quizologyss1](md_images/index.png)
+![quizologyss2](md_images/ss1.png)
+![quizologyss3](md_images/ss2.png)
+![quizologyss4](md_images/ss3.png)
+
+
+[Return to Directory](#directory)
 ---
