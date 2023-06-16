@@ -1,3 +1,8 @@
+// History category
+// Event listener, waits for DOM content
+
+// questionList variable - for generating random maths question operators (only non-function varible)
+
 let questionList = ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10"];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -26,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function runGame(gameType) {
+
+    // Displays the question based on the answer-box element's HTML content
 
     document.getElementById("answer-box").value = "";
     document.getElementById("answer-box").focus();
@@ -80,8 +87,8 @@ function checkAnswer() {
 
 function calculateCorrectAnswer() {
 
-    // Attains integer 1 and 2 and mathematical operator from DOM
-    // Throws error code for unrecognised "operator"
+    // Pairs answers to each question based on question element's HTML content
+    // Throws error code for unrecognised "questionContent"
 
     let questionContent = document.getElementById("question").textContent;
 
